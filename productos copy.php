@@ -353,7 +353,7 @@ include("header.php");
                 });
 
                 // Agrega los datos del cliente al formulario
-                agregarCampoOculto(form, 'cedulaCliente', cedulaCliente);
+                agregarCampoOculto(form, 'cedulaClienteBuscar', cedulaCliente);
                 agregarCampoOculto(form, 'tipoDocumentoCliente', tipoDocumentoCliente);
                 agregarCampoOculto(form, 'nombreCliente', nombreCliente);
                 agregarCampoOculto(form, 'ciudadCliente', ciudadCliente);
