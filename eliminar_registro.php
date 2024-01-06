@@ -48,11 +48,20 @@ function generarTabla($registros)
   $html .= '<tr>';
   $html .= '<td colspan="7"><div class="bg-light bg-gradient d-flex justify-content-end">
   <div class="alert alert-dismissible fade show" role="alert">
-  <strong>Total Productos:</strong> ' . $cantidadFinal . ' <br>
-      <strong>Total a Pagar:</strong> ' . '$' . number_format($totalPrecio, 0, ',', '.') . '
+    <div class="d-flex">
+      <div class="me-3">
+        <label for="totalProductos"><strong>Total Productos:</strong></label>
+        <input type="text" id="totalProductos" class="form-control" value="' . $cantidadFinal . '" readonly>
+      </div>
+
+      <div>
+        <label for="totalPagar"><strong>Total a Pagar:</strong></label>
+        <input type="text" id="totalPagar" class="form-control" value="$' . number_format($totalPrecio, 0, ',', '.') . '" readonly>
+      </div>
+    </div>
   </div>
 </div> </td>';
-  $html .= '</tr>';
+$html .= '</tr>';
 
   return $html;
 }
