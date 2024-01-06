@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Crear una venta en la tabla de ventas
-    $sqlVenta = "INSERT INTO ventas (cedula_cliente, tipo_documento_cliente, nombre_cliente, ciudad_cliente, direccion_cliente, celular_cliente, email_cliente) VALUES ('$cedulaCliente', '$tipoDocumentoCliente', '$nombreCliente', '$ciudadCliente', '$direccionCliente', '$celularCliente', '$emailCliente')";
+    $sqlVenta = "INSERT INTO ventas (cedula_cliente, tipo_documento_cliente, nombre_cliente, ciudad_cliente, direccion_cliente, celular_cliente, email_cliente, total_productos, valor_pagado) VALUES ('$cedulaCliente', '$tipoDocumentoCliente', '$nombreCliente', '$ciudadCliente', '$direccionCliente', '$celularCliente', '$emailCliente', '$totalProductos', '$totalPagar')";
 
     //definimos la ruta del pdf
     $ticketsFolder = __DIR__ . '/tickets/';
@@ -181,11 +181,10 @@ for ($i = 0; $i < count($nombres); $i++) {
         $pdf->Output("F", $rutaCompleta);
 
         // Actualizar la columna ruta_ticket en la tabla de ventas
-        $sqlActualizarRuta = "UPDATE ventas SET ruta_ticket = '$rutaCompleta' WHERE id_venta = $idVenta";
+        $sqlActualizarRuta = "UPDATE ventas SET ruta_ticket = '$nombreArchivo' WHERE id_venta = $idVenta";
 
         if ($conn->query($sqlActualizarRuta) === TRUE) {
             $pdf->Output("i", $nombreArchivo);
-            echo "Todo ok";
         } else {
             echo "Error al actualizar la ruta del ticket: " . $conn->error;
         }

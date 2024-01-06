@@ -26,7 +26,7 @@ $nombre = $_SESSION['nombre'];
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Punto de Venta</a>
+        <a class="navbar-brand ps-3" href="principal.php">Punto de Venta</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -52,7 +52,7 @@ $nombre = $_SESSION['nombre'];
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Administrador</div>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="principal.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Panel de control
                         </a>
@@ -84,14 +84,17 @@ $nombre = $_SESSION['nombre'];
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-sack-dollar"></i></div>
                             Nueva Venta
                         </a>
-                        <a class="nav-link" href="tables.html">
-                            <div class="sb-nav-link-icon"><i class="fa-solid fa-table"></i></div>
-                            Reporte Ventas
+                        <a class="nav-link" href="tickets.php">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                            Ticket's
+                        </a>
+                        <a class="nav-link" href="detalle-tickets.php">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></div>
+                            Venta al detalle
                         </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Desarrollado Por:</div>
                     &copy; BigTic.
                 </div>
             </nav>
