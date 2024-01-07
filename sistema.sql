@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 12-12-2023 a las 22:16:44
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Host: localhost
+-- Generation Time: Jan 07, 2024 at 11:16 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sistema`
+-- Database: `sistema`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `clientes`
+-- Table structure for table `clientes`
 --
 
 CREATE TABLE `clientes` (
@@ -40,16 +40,16 @@ CREATE TABLE `clientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `clientes`
+-- Dumping data for table `clientes`
 --
 
 INSERT INTO `clientes` (`id`, `nombre_cliente`, `tipo_documento`, `numero_documento`, `ciudad`, `direccion_domicilio`, `celular`, `email`, `fecha_creacion`) VALUES
-(45, 'CRISTIAN CAMILO CEBALLOS MARIN', 'C.C', 1007581003, 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-07 00:26:57');
+(2, 'PRUEBA', 'C.C', 1, 'ARMENIA', 'P', '21', 'ARI-990MUOZ@HOTMAIL.COM', '2024-01-07 22:08:39');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `detalles_venta`
+-- Table structure for table `detalles_venta`
 --
 
 CREATE TABLE `detalles_venta` (
@@ -62,109 +62,10 @@ CREATE TABLE `detalles_venta` (
   `total_pagar` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Volcado de datos para la tabla `detalles_venta`
---
-
-INSERT INTO `detalles_venta` (`id_detalle`, `id_venta`, `nombre_producto`, `descripcion_producto`, `precio_unitario`, `cantidad`, `total_pagar`) VALUES
-(45, 20, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(46, 20, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(47, 21, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(48, 21, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(49, 22, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(50, 22, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(51, 22, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(52, 23, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(53, 23, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(54, 23, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(55, 24, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(56, 24, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(57, 24, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(58, 25, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(59, 25, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(60, 25, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(61, 26, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(62, 26, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(63, 26, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(64, 27, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(65, 27, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(66, 27, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(67, 27, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(68, 28, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(69, 28, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(70, 28, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(71, 28, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(72, 29, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(73, 29, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(74, 29, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(75, 29, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(76, 30, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(77, 30, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(78, 30, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(79, 30, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(80, 31, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(81, 31, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(82, 31, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(83, 31, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(84, 32, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(85, 32, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(86, 33, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(87, 33, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(88, 34, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(89, 34, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(90, 35, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(91, 35, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(92, 36, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(93, 36, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(94, 37, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(95, 37, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(96, 37, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(97, 38, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(98, 38, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(99, 38, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(100, 39, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(101, 39, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(102, 39, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(103, 40, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(104, 40, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(105, 40, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(106, 41, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(107, 41, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(108, 41, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(109, 42, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(110, 42, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(111, 42, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(112, 43, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(113, 43, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(114, 43, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(115, 44, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(116, 44, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(117, 44, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(118, 45, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(119, 45, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(120, 45, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(121, 45, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(122, 46, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(123, 46, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(124, 46, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(125, 46, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(126, 47, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(127, 47, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(128, 47, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(129, 47, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(130, 48, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(131, 48, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(132, 48, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(133, 48, 'undefined', 'undefined', 'undefined', 0, 'undefined'),
-(134, 49, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(135, 49, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(136, 49, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 1, '6.000'),
-(137, 49, 'undefined', 'undefined', 'undefined', 0, 'undefined');
-
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productos`
+-- Table structure for table `productos`
 --
 
 CREATE TABLE `productos` (
@@ -176,16 +77,16 @@ CREATE TABLE `productos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `productos`
+-- Dumping data for table `productos`
 --
 
 INSERT INTO `productos` (`id`, `nombre_producto`, `descripcion_producto`, `precio_producto`, `activo`) VALUES
-(11, 'SHAMPOO BALSAMO', 'ES UN SHAMPOO ASI Y ASI', '6.000', 'SI');
+(2, 'PRUEBAS DE ERROR', 'A', '16.000', 'SI');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -197,7 +98,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `nombre`, `tipo_usuario`) VALUES
@@ -207,7 +108,7 @@ INSERT INTO `usuarios` (`id`, `usuario`, `password`, `nombre`, `tipo_usuario`) V
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ventas`
+-- Table structure for table `ventas`
 --
 
 CREATE TABLE `ventas` (
@@ -219,127 +120,88 @@ CREATE TABLE `ventas` (
   `direccion_cliente` varchar(100) DEFAULT NULL,
   `celular_cliente` varchar(20) DEFAULT NULL,
   `email_cliente` varchar(50) DEFAULT NULL,
+  `total_productos` int(11) NOT NULL,
+  `valor_pagado` varchar(100) NOT NULL,
+  `ruta_ticket` varchar(100) DEFAULT NULL,
   `fecha_venta` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `ventas`
---
-
-INSERT INTO `ventas` (`id_venta`, `cedula_cliente`, `tipo_documento_cliente`, `nombre_cliente`, `ciudad_cliente`, `direccion_cliente`, `celular_cliente`, `email_cliente`, `fecha_venta`) VALUES
-(14, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 17:35:25'),
-(15, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 19:07:58'),
-(16, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 19:08:32'),
-(17, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 19:10:52'),
-(18, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 19:11:58'),
-(19, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 19:20:29'),
-(20, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 19:22:40'),
-(21, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:25:14'),
-(22, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:34:06'),
-(23, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:34:33'),
-(24, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:34:58'),
-(25, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:36:00'),
-(26, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:36:41'),
-(27, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:36:56'),
-(28, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:39:14'),
-(29, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:39:56'),
-(30, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:42:53'),
-(31, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:44:35'),
-(32, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-11 20:44:56'),
-(33, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:42:53'),
-(34, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:45:09'),
-(35, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:45:52'),
-(36, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:46:19'),
-(37, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:47:42'),
-(38, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:50:26'),
-(39, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:51:17'),
-(40, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:51:40'),
-(41, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:52:12'),
-(42, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:52:27'),
-(43, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:53:19'),
-(44, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:57:52'),
-(45, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:58:10'),
-(46, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:59:07'),
-(47, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 15:59:34'),
-(48, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 16:00:27'),
-(49, '1007581003', 'C.C', 'CRISTIAN CAMILO CEBALLOS MARIN', 'ARAUCA', 'DIRCCION ABC', '3243233212', 'COMEFCIALBIGTIC@GMAIL.COM', '2023-12-12 16:02:47');
-
---
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `clientes`
+-- Indexes for table `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `numero_documento` (`numero_documento`);
 
 --
--- Indices de la tabla `detalles_venta`
+-- Indexes for table `detalles_venta`
 --
 ALTER TABLE `detalles_venta`
   ADD PRIMARY KEY (`id_detalle`),
   ADD KEY `id_venta` (`id_venta`);
 
 --
--- Indices de la tabla `productos`
+-- Indexes for table `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `ventas`
+-- Indexes for table `ventas`
 --
 ALTER TABLE `ventas`
   ADD PRIMARY KEY (`id_venta`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `clientes`
+-- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `detalles_venta`
+-- AUTO_INCREMENT for table `detalles_venta`
 --
 ALTER TABLE `detalles_venta`
-  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `productos`
+-- AUTO_INCREMENT for table `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `ventas`
+-- AUTO_INCREMENT for table `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `detalles_venta`
+-- Constraints for table `detalles_venta`
 --
 ALTER TABLE `detalles_venta`
   ADD CONSTRAINT `detalles_venta_ibfk_1` FOREIGN KEY (`id_venta`) REFERENCES `ventas` (`id_venta`);
