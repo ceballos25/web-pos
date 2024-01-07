@@ -3,11 +3,6 @@ require 'conexion.php';
 $sql = "SELECT id_venta, cedula_cliente, tipo_documento_cliente, nombre_cliente, ciudad_cliente, celular_cliente, email_cliente, total_productos, valor_pagado, ruta_ticket, fecha_venta FROM ventas ORDER BY fecha_venta DESC";
 $resultado = $mysqli->query($sql);
 
-
-?>
-
-<?php
-
 include("header.php");
 
 ?>
@@ -17,7 +12,7 @@ include("header.php");
         <div class="container-fluid px-4">
             <h1 class="mt-4">Tickets</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                <li class="breadcrumb-item"><a href="principal.php">Panel de Control</a></li>
                 <li class="breadcrumb-item active">Tickets</li>
             </ol>
             <div class="card mb-4">
@@ -40,6 +35,7 @@ include("header.php");
                                 <th>Total</th>
                                 <th>Ticket</th>
                                 <th>Fecha Venta</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -55,6 +51,7 @@ include("header.php");
                             <th>Total</th>
                             <th>Ticket</th>
                             <th>Fecha Venta</th>
+                            <th></th>
                             </tr>
                         </tfoot>
                         <tbody>
@@ -73,8 +70,30 @@ include("header.php");
                                     <td><?php echo $row['valor_pagado'] ?></td>
                                     <td><a href="tickets/<?php echo basename($row['ruta_ticket']); ?>" target="_blank"><i class="fa-regular fa-file-pdf"></i></a></td>
                                     <td><?php echo date('d-m-Y', strtotime($row['fecha_venta'])); ?></td>
+                                    <td><span style="cursor:pointer;" onclick="enviarCorreo('<?php echo $row['id_venta'] ?>', '<?php echo $row['nombre_cliente'] ?>', '<?php echo $row['email_cliente'] ?>', '<?php echo urlencode($row['ruta_ticket']) ?>', '<?php echo $row['fecha_venta'] ?>')"><i class="bi bi-send"></i></span></td>
                                 </tr>
                             <?php } ?>
+
+                            <!--script para enviar copia al correo del cliente-->
+                        <script>
+                            function enviarCorreo(idVenta, nombreCliente, emailCliente, rutaTicket, fechaVenta) {
+                                Swal.fire({
+                                    title: '¿Deseas Enviar Copia del Ticket al Cliente?',
+                                    icon: 'question',
+                                    showCancelButton: true,
+                                    confirmButtonText: 'Sí, enviar',
+                                    cancelButtonText: 'No, mejor no',
+                                    cancelButtonColor: '#d33', // Cambia este valor al color que desees
+                                    confirmButtonColor: '#198754'
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        // Construir la URL con los parámetros y redirigir
+                                        var url = "enviar-cliente.php?id_venta=" + idVenta + "&nombre_cliente=" + encodeURIComponent(nombreCliente) + "&email_cliente=" + encodeURIComponent(emailCliente) + "&ruta_ticket=" + encodeURIComponent(rutaTicket) + "&fecha_venta=" + fechaVenta;
+                                        window.location.href = url;
+                                    }
+                                });
+                            }
+                        </script>
                         </tbody>
                     </table>
                 </div>

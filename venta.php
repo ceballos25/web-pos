@@ -11,7 +11,7 @@ include("header.php");
         <div class="container-fluid px-4">
             <h1 class="mt-4">Generar Venta</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                <li class="breadcrumb-item"><a href="principal.php">Panel de Control</a></li>
                 <li class="breadcrumb-item active">Generar Venta</li>
             </ol>
             <div class="card mb-4">

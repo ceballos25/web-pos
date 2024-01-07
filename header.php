@@ -21,12 +21,13 @@ $nombre = $_SESSION['nombre'];
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="principal.php">Punto de Venta</a>
+        <a class="navbar-brand ps-3 fs-5" href="principal.php">WEB | POS</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -90,7 +91,7 @@ $nombre = $_SESSION['nombre'];
                         </a>
                         <a class="nav-link" href="detalle-tickets.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></div>
-                            Venta al detalle
+                            Ventas al detalle
                         </a>
                     </div>
                 </div>

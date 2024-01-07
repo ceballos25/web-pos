@@ -2,9 +2,6 @@
 require 'conexion.php';
 $sql = "SELECT id, nombre_cliente, tipo_documento, numero_documento, ciudad, direccion_domicilio, celular, email FROM clientes";
 $resultado = $mysqli->query($sql);
-?>
-
-<?php
 
 include("header.php");
 
@@ -15,7 +12,7 @@ include("header.php");
         <div class="container-fluid px-4">
             <h1 class="mt-4">Clientes</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                <li class="breadcrumb-item"><a href="principal.php">Panel de Control</a></li>
                 <li class="breadcrumb-item active">Clientes</li>
             </ol>
             <div class="container-fluid m-3">
