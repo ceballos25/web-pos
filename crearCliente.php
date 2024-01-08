@@ -22,7 +22,8 @@ if ($_POST) {
             title: "¡Cliente Creado!",
             text: "El cliente se creó correctamente",
             icon: "success",
-            confirmButtonText: "Volver"
+            confirmButtonText: "Volver",
+            confirmButtonColor: "#000"
         }).then(function() {
             window.location.href = "clientes.php";});
     </script>';
@@ -32,7 +33,8 @@ if ($_POST) {
             title: "¡Ups...!",
             text: "Algo salió mal",
             icon: "error",
-            confirmButtonText: "Volver a intentar"
+            confirmButtonText: "Volver a intentar",
+            confirmButtonColor: "#000"
         }).then(function() {
             window.location.href = "clientes.php";});
     </script>';

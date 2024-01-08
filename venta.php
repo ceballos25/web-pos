@@ -142,6 +142,7 @@ include("header.php");
                     icon: "error",
                     title: "¡Algo salió mal!",
                     text: "Debe agregar al menos un producto",
+                    confirmButtonColor: "#000",
                 });
                 return;
             }
@@ -260,6 +261,7 @@ include("header.php");
             icon: "error",
             title: "¡Algo salió mal!",
             text: "Debe agregar al menos un producto",
+            confirmButtonColor: "#000",
         });
         return;
     }
@@ -296,6 +298,7 @@ include("header.php");
                                     icon: "error",
                                     title: "¡Algo salió mal!",
                                     text: "Cliente no Encontrado, Verifique N° Documento",
+                                    confirmButtonColor: "#000",
                                 });
                             }
                         } catch (error) {
@@ -305,6 +308,7 @@ include("header.php");
                                 icon: "error",
                                 title: "¡Algo salió mal!",
                                 text: "Contacte al Administrador",
+                                confirmButtonColor: "#000",
                             });
                         }
                     } else {
@@ -314,6 +318,7 @@ include("header.php");
                             icon: "error",
                             title: "¡Algo salió mal!",
                             text: "Contacte al Administrador",
+                            confirmButtonColor: "#000",
                         });
                     }
                 }

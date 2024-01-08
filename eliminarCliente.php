@@ -14,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             Swal.fire({
                 title: "¡Cliente eliminimado!",
                 icon: "success",
-                confirmButtonText: "Volver"
+                confirmButtonText: "Volver",
+                confirmButtonColor: "#000"
             }).then(function() {
                 window.location.href = "clientes.php";
             });

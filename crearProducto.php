@@ -19,7 +19,8 @@ if ($_POST) {
             title: "¡Producto Creado!",
             text: "Producto Creado Correctamente",
             icon: "success",
-            confirmButtonText: "Volver"
+            confirmButtonText: "Volver",
+            confirmButtonColor: "#000"
         }).then(function() {
             window.location.href = "productos.php";});
     </script>';
@@ -29,7 +30,8 @@ if ($_POST) {
             title: "¡Ups...!",
             text: "Algo salió mal",
             icon: "error",
-            confirmButtonText: "Volver a intentar"
+            confirmButtonText: "Volver a intentar",
+            confirmButtonColor: "#000"
         }).then(function() {
             window.location.href = "productos.php";});
     </script>';

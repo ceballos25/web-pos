@@ -27,7 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 title: "Datos actualizados!",
                 text: "Los datos se actualizaron correctamente",
                 icon: "success",
-                confirmButtonText: "Volver"
+                confirmButtonText: "Volver",
+                confirmButtonColor: "#000"
             }).then(function() {
                 window.location.href = "clientes.php";
             });
@@ -38,7 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 title: "¡Ups...!",
                 text: "Algo salió mal",
                 icon: "error",
-                confirmButtonText: "Volver a intentar"
+                confirmButtonText: "Volver a intentar",
+                confirmButtonColor: "#000"
             }).then(function() {
                 window.location.href = "clientes.php";
             });
